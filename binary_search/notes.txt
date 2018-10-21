@@ -1,0 +1,23 @@
+Jacob
+11:50 AM (7 hours ago)
+to Christy
+
+It's looking good. Few notes:
+
+done(
+There needs to be a count of guesses made (both for human and computer 
+players). This is to demonstrate how good binary search is.
+)
+
+fixed(
+The guess box isn't actually show the guess.
+)
+
+done(
+It would be ideal for the computer to demonstrate it's logic visually. 
+The point of the game is to teach binary search to players.
+)
+
+I hope this notes are helpful, and thank you for all your work.
+
+Jacob

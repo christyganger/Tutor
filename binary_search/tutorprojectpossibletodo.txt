@@ -1,0 +1,20 @@
+
+Make more user friendly
+
+Make prettier
+
+need tell user to pick highest.
+
+Replace code box with instructions parameters to enter number and highest number
+
+tell user to click gess after less or more.
+
+what is my number range to pick as number or highest
+
+replace guss mode with more instr?
+
+Bigger num on line, improve clarity.
+
+reward for finish?
+
+Do User guessing number option.

@@ -1,0 +1,53 @@
+Pseudocode Godot - CIS tutor binary search.
+
+IPO
+
+Input
+Ask user for Highest value to guess from
+pick rand win num
+pick player (comp or human)
+
+((user PLAYER))
+Processing
+input Guess for number
+incriment num_guess
+
+check_button
+if guess > rand_win
+	display try lower
+if guess < rand_win
+	display try higher
+if guess = rand_win
+	display WIN!
+
+
+Output
+win == "YOU WIN!" Display high number, guessed number, number of guesses, button to try again or have pc guess.
+display lower
+display higher
+
+
+((PC PLAYER))
+
+Processing
+Take lowest value 0
+Take highest value
+Add lowest value to highest value, divide by 2
+	assign to mid
+	check if mid is equal to rand_win, end output
+
+if mid is lower than user number 
+	subtract 1 from mid
+		mid becomes highest
+			start over 
+			
+if mid is higher than user 
+		add one to mid
+			mid becomes lowest
+				start over
+
+Output
+basic info to enter data
+Current mid
+buttons to go lower or higher
+highest number? (or disable after first entry)
