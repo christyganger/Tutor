@@ -2,7 +2,7 @@
 
 [ext_resource path="res://player_guess_main.gd" type="Script" id=1]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -345,45 +345,12 @@ text = "Main"
 flat = false
 align = 1
 
-[node name="goto_pcguess_Button2" type="Button" parent="." index="9"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 428.0
-margin_top = 657.0
-margin_right = 515.0
-margin_bottom = 677.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "PC GUESS"
-flat = false
-align = 1
-
 [connection signal="text_changed" from="prompt_user" to="." method="_on_promp_user_text_changed"]
 
 [connection signal="text_changed" from="user_guess_prompt_label/user_guess_TextEdit" to="." method="_on_user_guess_TextEdit_text_changed"]
 
-[connection signal="text_changed" from="player_guess_Label/Player_guesses_updatebox" to="." method="_on_Player_guesses_updatebox_text_changed"]
-
-[connection signal="text_changed" from="pc_guess_label/pc_guess_updatebox" to="." method="_on_pc_guess_updatebox_text_changed"]
-
-[connection signal="text_changed" from="Highest_possible_label/highest_possible_lineedit" to="." method="_on_highest_possible_lineedit_text_changed"]
-
 [connection signal="pressed" from="check_Button" to="." method="_on_check_Button_pressed"]
 
 [connection signal="pressed" from="goto_main_Button" to="." method="_on_goto_main_Button_pressed"]
-
-[connection signal="pressed" from="goto_pcguess_Button2" to="." method="_on_goto_pcguess_Button2_pressed"]
 
 

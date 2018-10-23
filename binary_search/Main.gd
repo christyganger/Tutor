@@ -28,5 +28,5 @@ func _on_Buttonguessmain_pressed():
 func _on_TextEdit_text_changed():
 	global.user_input_highest = int(highest_number_textbox.get_text())
 	if global.user_input_highest >= 1:
-		global.randomnumber = int((rand_range(1,global.user_input_highest)))
+		global.randomnumber = int(rand_range(1,global.user_input_highest))
 	pass # replace with function body
