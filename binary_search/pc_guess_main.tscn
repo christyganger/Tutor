@@ -69,13 +69,13 @@ font_path = "res://cnr.otf"
 
 [sub_resource type="DynamicFont" id=10]
 
-size = 14
+size = 24
 use_mipmaps = false
 use_filter = false
 font_data = SubResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="pc_guess_main" type="Control"]
+[node name="pc_guess_main" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -567,9 +567,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -278.0
-margin_top = 239.0
-margin_right = -198.0
-margin_bottom = 322.0
+margin_top = 215.0
+margin_right = -163.0
+margin_bottom = 351.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
