@@ -23,6 +23,7 @@ func _process(delta):
 	player_guess_amount.set_text(String(global.amount_of_user_guesses))
 	highest_number_box.set_text(String(global.user_input_highest))
 	pc_guess_amount.set_text(String(global.guess_count))
+	
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 	pass
@@ -43,7 +44,8 @@ func _on_check_Button_pressed():
 	elif user_guess_number < global.randomnumber:
 			higher_lower_check_label_feedback.set_text("Try Guessing Higher")
 	elif user_guess_number == global.randomnumber:
-		higher_lower_check_label_feedback.set_text("YOU WIN!")
+		prompt_user_box.set_text("YOU WIN!")
+		get_node("check_Button").hide()
 
 
 

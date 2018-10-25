@@ -6,10 +6,9 @@ var your_number_goes_here = 0
 var text_buffer_out = "a random number has been placed in your number box for the pc to guess" + "\n"
 
 onready var my_number_is_textbox = get_node("your_number_is/my_number_is")
-onready var user_input_highest_textbox = get_node("Label2/user_input_highest")
+
 onready var Button_guess_button = get_node("Button_guess")
-onready var Button_my_number_is_lower_button = get_node("Button_my_number_is_lower")
-onready var Button_my_number_is_higher_button = get_node("Button_my_number_is_higher")
+
 onready var pc_current_guess_out_textbox = get_node("pc_current_guess_out_mainintro/textbox_pc_current_guess_out")
 onready var debug_out = get_node("debug")
 onready var pc_guess_window = get_node("Label/pc_guess_count")
