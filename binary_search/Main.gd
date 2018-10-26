@@ -1,7 +1,7 @@
 extends Control
 
 # Get node
-onready var highest_number_textbox = get_node("user_input_highest/TextEdit")
+onready var highest_number_textbox = get_node("user_input_highest/user_highest_declare")
 onready var highest_number_current = get_node("current_number/TextEdit")
 onready var user_current_guess = get_node("user_guesses_current/current__user_guesses_textbox")
 onready var pc_current_guess = get_node("pc_guesses_current/current_pc_guesses")
@@ -30,13 +30,6 @@ func _on_Buttonguessmain_pressed():
 	pass # replace with function body
 
 
-func _on_TextEdit_text_changed():
-	
-	global.user_input_highest = int(highest_number_textbox.get_text())
-	if global.user_input_highest >= 1:
-		global.randomnumber = int(rand_range(1,global.user_input_highest))
-	
-	pass # replace with function body
 
 func _process(delta):
 	
@@ -59,4 +52,11 @@ func _on_button_reset_count_pressed():
 	global.user_input_highest = 0
 	global.guess_count = 0
 	global.amount_of_user_guesses = 0
+	pass # replace with function body
+
+
+func _on_user_highest_declare_text_changed(new_text):
+	global.user_input_highest = int(highest_number_textbox.get_text())
+	if (global.user_input_highest >= 1):
+		global.randomnumber = int(rand_range(1,global.user_input_highest))
 	pass # replace with function body

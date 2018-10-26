@@ -12,6 +12,7 @@ config_version=3
 
 config/name="binary_search"
 run/main_scene="res://Main.tscn"
+boot_splash/fullsize=false
 config/icon="res://icon.png"
 
 [autoload]

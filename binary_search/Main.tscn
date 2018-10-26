@@ -165,7 +165,7 @@ lines_skipped = 0
 max_lines_visible = 1
 _sections_unfolded = [ "Focus", "Grow Direction", "Hint", "Margin", "Material", "Rect", "Visibility" ]
 
-[node name="TextEdit" type="LineEdit" parent="user_input_highest" index="0"]
+[node name="user_highest_declare" type="LineEdit" parent="user_input_highest" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -388,7 +388,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [connection signal="pressed" from="Polygon2D/Label/Buttonguessmain" to="." method="_on_Buttonguessmain_pressed"]
 
-[connection signal="text_changed" from="user_input_highest/TextEdit" to="." method="_on_TextEdit_text_changed"]
+[connection signal="text_changed" from="user_input_highest/user_highest_declare" to="." method="_on_user_highest_declare_text_changed"]
 
 [connection signal="pressed" from="button_reset_count" to="." method="_on_button_reset_count_pressed"]
 
