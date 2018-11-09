@@ -1,16 +1,20 @@
 extends Control
 
 # Get node
+
 onready var highest_number_textbox = get_node("user_input_highest/user_highest_declare")
 onready var highest_number_current = get_node("current_number/TextEdit")
 onready var user_current_guess = get_node("user_guesses_current/current__user_guesses_textbox")
 onready var pc_current_guess = get_node("pc_guesses_current/current_pc_guesses")
 onready var label_user_input = get_node("user_input_highest")
+const DefaultManager = preload("pc_guess_main.gd") # Relative path
+onready var default_manager = DefaultManager.new()
+
 
 func _ready():
 	get_node("Polygon2D/Label/Buttonguessmain").set_text("You guess the Program's number")
 	get_node("Polygon2D/Label/Buttonpcfiguremain").set_text("Program guesses your number")
-	
+	default_manager.Run_code(10)
 	#global.user_input_highest
 func _on_Buttonpcfiguremain_pressed():
 	
