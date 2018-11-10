@@ -23,9 +23,12 @@ func _ready():
 	my_number_is_textbox.set_text(String(global.randomnumber))
 	mid = (global.user_input_highest + user_input_lowest) / 2
 	pc_current_guess_out_textbox.set_text(String(mid))
+	
 	pass
 
-
+func Run_code(num):
+	print(num);
+	return(num+10);
 	
 func _on_Button_guess_pressed():
 			
@@ -34,6 +37,7 @@ func _on_Button_guess_pressed():
 		global.guess_count +=1
 		pc_guess_window.set_text(String(global.guess_count))
 		get_node("Button_guess").hide()
+		
 		pass
 	
 	if mid < global.randomnumber:
