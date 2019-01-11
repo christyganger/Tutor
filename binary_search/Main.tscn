@@ -34,7 +34,7 @@ size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin" ]
 
-[node name="Label" type="Label" parent="." index="0"]
+[node name="out_main_welcome" type="Label" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -50,12 +50,11 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Helllo, welcome to Binary Search."
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Polygon2D" type="Polygon2D" parent="." index="1"]
+[node name="out_main_button_box" type="Polygon2D" parent="." index="1"]
 
 position = Vector2( 377.541, 263.108 )
 scale = Vector2( 2, 1 )
@@ -73,7 +72,7 @@ invert_enable = false
 invert_border = 100.0
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Label" type="Label" parent="Polygon2D" index="0"]
+[node name="out_main_button_primary_gameplay_style" type="Label" parent="out_main_button_box" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -89,13 +88,12 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Please select play style."
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Buttonpcfiguremain" type="Button" parent="Polygon2D/Label" index="0"]
+[node name="out_main_button_1_program_guesses" type="Button" parent="out_main_button_box/out_main_button_primary_gameplay_style" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -119,7 +117,7 @@ group = null
 flat = false
 align = 1
 
-[node name="Buttonguessmain" type="Button" parent="Polygon2D/Label" index="1"]
+[node name="out_main_button_2_user_guesses" type="Button" parent="out_main_button_box/out_main_button_primary_gameplay_style" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -143,7 +141,7 @@ group = null
 flat = false
 align = 1
 
-[node name="user_input_highest" type="Label" parent="." index="2"]
+[node name="out_main_highest_guess_in_number" type="Label" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -159,13 +157,12 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Please enter highest number you want to guess from"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
 _sections_unfolded = [ "Focus", "Grow Direction", "Hint", "Margin", "Material", "Rect", "Visibility" ]
 
-[node name="user_highest_declare" type="LineEdit" parent="user_input_highest" index="0"]
+[node name="in_main_highest_guess_in_number" type="LineEdit" parent="out_main_highest_guess_in_number" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -188,8 +185,9 @@ placeholder_alpha = 0.6
 caret_blink = false
 caret_blink_speed = 0.65
 caret_position = 0
+_sections_unfolded = [ "Visibility" ]
 
-[node name="current_number" type="Label" parent="." index="3"]
+[node name="out_main_current_highest_num" type="Label" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -205,13 +203,12 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Current Highest number:"
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="TextEdit" type="TextEdit" parent="current_number" index="0"]
+[node name="in_main_current_highest_num" type="TextEdit" parent="out_main_current_highest_num" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -245,7 +242,7 @@ caret_blink = false
 caret_blink_speed = 0.65
 caret_moving_by_right_click = true
 
-[node name="user_guesses_current" type="Label" parent="." index="4"]
+[node name="out_main_current_user_guess_amount" type="Label" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -261,22 +258,21 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Current users amount of guesses:"
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="current__user_guesses_textbox" type="TextEdit" parent="user_guesses_current" index="0"]
+[node name="in_main_current_user_guess_amount" type="TextEdit" parent="out_main_current_user_guess_amount" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 229.0
-margin_top = 20.0
-margin_right = 286.0
-margin_bottom = 61.0
+margin_left = 251.0
+margin_top = 22.0
+margin_right = 308.0
+margin_bottom = 63.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -301,7 +297,7 @@ caret_blink = false
 caret_blink_speed = 0.65
 caret_moving_by_right_click = true
 
-[node name="pc_guesses_current" type="Label" parent="." index="5"]
+[node name="out_main_current_pc_guess_amount" type="Label" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -317,13 +313,12 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Current PC's amount of guesses:"
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="current_pc_guesses" type="TextEdit" parent="pc_guesses_current" index="0"]
+[node name="in_main_current_pc_guess_amount" type="TextEdit" parent="out_main_current_pc_guess_amount" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -357,7 +352,7 @@ caret_blink = false
 caret_blink_speed = 0.65
 caret_moving_by_right_click = true
 
-[node name="button_reset_count" type="Button" parent="." index="6"]
+[node name="out_main_button_3_reset" type="Button" parent="." index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -379,12 +374,11 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Reset Game!"
 flat = false
 align = 1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="help_button" type="Button" parent="." index="7"]
+[node name="out_main_button_4_help" type="Button" parent="." index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -405,16 +399,17 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "HELP!"
 flat = false
 align = 1
 
-[connection signal="pressed" from="Polygon2D/Label/Buttonpcfiguremain" to="." method="_on_Buttonpcfiguremain_pressed"]
+[connection signal="pressed" from="out_main_button_box/out_main_button_primary_gameplay_style/out_main_button_1_program_guesses" to="." method="_on_Buttonpcfiguremain_pressed"]
 
-[connection signal="pressed" from="Polygon2D/Label/Buttonguessmain" to="." method="_on_Buttonguessmain_pressed"]
+[connection signal="pressed" from="out_main_button_box/out_main_button_primary_gameplay_style/out_main_button_2_user_guesses" to="." method="_on_Buttonguessmain_pressed"]
 
-[connection signal="text_changed" from="user_input_highest/user_highest_declare" to="." method="_on_user_highest_declare_text_changed"]
+[connection signal="text_changed" from="out_main_highest_guess_in_number/in_main_highest_guess_in_number" to="." method="_on_in_main_highest_guess_in_number_text_changed"]
 
-[connection signal="pressed" from="button_reset_count" to="." method="_on_button_reset_count_pressed"]
+[connection signal="text_changed" from="out_main_current_highest_num/in_main_current_highest_num" to="." method="_on_in_main_current_highest_num_text_changed"]
+
+[connection signal="pressed" from="out_main_button_3_reset" to="." method="_on_button_reset_count_pressed"]
 
 

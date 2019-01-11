@@ -1,19 +1,54 @@
 extends Control
 
 # Get node
+#const string table
+const out_main_welcome_dialog = "Hello, Welcome to Binary Search.";
+const out_main_current_pc_guess_amount_dialog = "Current PC's amount of guesses:";
+const out_main_current_user_guess_amount_dialog = "Current Player's amount of guesses:";
+const out_main_highest_guess_in_number_dialog ="Please enter the highest number to guess from:";
+const out_main_current_highest_num_dialog = "Current Highest Number";
+const out_main_button_primary_gameplay_style_dialog = "Please Select: Play style";
+const out_main_button_1_program_guesses_dialog = "PC guesses your number";
+const out_main_button_2_user_guesses_dialog = "You guess the PC's number";
+const out_main_button_3_reset_dialog = "Reset Game!";
+const out_main_button_4_help_dialog = "HELP!";
 
-onready var highest_number_textbox = get_node("user_input_highest/user_highest_declare")
-onready var highest_number_current = get_node("current_number/TextEdit")
-onready var user_current_guess = get_node("user_guesses_current/current__user_guesses_textbox")
-onready var pc_current_guess = get_node("pc_guesses_current/current_pc_guesses")
-onready var label_user_input = get_node("user_input_highest")
+#alias variables
+onready var in_main_highest_guess_in_number_box = get_node("out_main_highest_guess_in_number/in_main_highest_guess_in_number")
+onready var in_main_current_highest_num_box = get_node("out_main_highest_guess_in_number/in_main_highest_guess_in_number")
+onready var in_main_current_user_guess_amount_box = get_node("out_main_current_user_guess_amount/in_main_current_user_guess_amount")
+onready var in_main_current_pc_guess_amount_box = get_node("out_main_current_pc_guess_amount/in_main_current_pc_guess_amount")
+onready var out_main_button_4_help = get_node("out_main_button_4_help")
+onready var out_main_button_3_reset = get_node("out_main_button_3_reset")
+onready var out_main_button_2_user_guess = get_node("out_main_button_box/out_main_button_primary_gameplay_style/out_main_button_2_user_guesses")
+onready var out_main_button_1_program_guesses = get_node("out_main_button_box/out_main_button_primary_gameplay_style/out_main_button_1_program_guesses")
+onready var out_main_button_primary_gameplay_style = get_node("out_main_button_box/out_main_button_primary_gameplay_style")
+onready var out_main_current_highest_num = get_node("out_main_current_highest_num")
+onready var out_main_highest_guess_in_number = get_node("out_main_highest_guess_in_number") 
+onready var out_main_current_user_guess_amount = get_node("out_main_current_user_guess_amount")
+onready var out_main_current_pc_guess_amount = get_node("out_main_current_pc_guess_amount")
+onready var out_main_welcome = get_node("out_main_welcome")
 const DefaultManager = preload("pc_guess_main.gd") # Relative path
 onready var default_manager = DefaultManager.new()
+#prototype
 
 
 func _ready():
-	get_node("Polygon2D/Label/Buttonguessmain").set_text("You guess the Program's number")
-	get_node("Polygon2D/Label/Buttonpcfiguremain").set_text("Program guesses your number")
+	var in_main_variables = [0,0,0,0]
+	# in_main_highest_guess_in_number = 0;
+	# in_main_current_highest_num = 1;
+	# in_main_current_pc_guess_amount = 2;
+	# in_main_current_user_guess_amount = 3;
+	out_main_welcome.set_text(out_main_welcome_dialog)
+	out_main_current_pc_guess_amount.set_text(out_main_current_pc_guess_amount_dialog)
+	out_main_current_user_guess_amount.set_text(out_main_current_user_guess_amount_dialog)
+	out_main_highest_guess_in_number.set_text(out_main_highest_guess_in_number_dialog)
+	out_main_current_highest_num.set_text(out_main_current_highest_num_dialog)
+	out_main_button_primary_gameplay_style.set_text(out_main_button_primary_gameplay_style_dialog)
+	out_main_button_1_program_guesses.set_text(out_main_button_1_program_guesses_dialog)
+	out_main_button_2_user_guess.set_text(out_main_button_2_user_guesses_dialog)
+	out_main_button_3_reset.set_text(out_main_button_3_reset_dialog)
+	out_main_button_4_help.set_text(out_main_button_4_help_dialog)
 	default_manager.Run_code(10)
 	#global.user_input_highest
 func _on_Buttonpcfiguremain_pressed():
@@ -37,13 +72,14 @@ func _on_Buttonguessmain_pressed():
 
 func _process(delta):
 	
-	highest_number_current.set_text(String(global.user_input_highest))
-	user_current_guess.set_text(String(global.amount_of_user_guesses))
-	pc_current_guess.set_text(String(global.guess_count))
+	
+	
+	
 	if (global.text_change_flag == 1):
-		label_user_input.set_visible(false)
+		out_main_highest_guess_in_number.set_visible(false)
 	else:
-		label_user_input.set_visible(true)
+		out_main_highest_guess_in_number.set_visible(true)
+		
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 	pass
@@ -51,16 +87,25 @@ func _process(delta):
 
 
 
-func _on_button_reset_count_pressed():
+func _on_button_reset_count_pressed(in_main_variables):
 	global.text_change_flag = 0
-	global.user_input_highest = 0
-	global.guess_count = 0
-	global.amount_of_user_guesses = 0
+	in_main_variables[0] = 0;
+	in_main_variables[1] = 0;
+	in_main_variables[2] = 0;
+	in_main_variables[3] = 0;
 	pass # replace with function body
 
 
-func _on_user_highest_declare_text_changed(new_text):
-	global.user_input_highest = int(highest_number_textbox.get_text())
-	if (global.user_input_highest >= 1):
-		global.randomnumber = int(rand_range(1,global.user_input_highest))
+
+
+func _on_in_main_current_highest_num_text_changed(in_main_variables):
+	in_main_current_highest_num_box.set_text(in_main_variables[1])
+	
+	pass # replace with function body
+
+
+func _on_in_main_highest_guess_in_number_text_changed(in_main_variables):
+	in_main_variables[1] = in_main_current_highest_num_box.get_text()
+	if (in_main_variables[1]  >= 1):
+		global.randomnumber = int(rand_range(1, in_main_variables[1] ))
 	pass # replace with function body
