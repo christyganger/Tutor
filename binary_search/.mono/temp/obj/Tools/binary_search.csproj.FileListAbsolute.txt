@@ -1,0 +1,6 @@
+C:\Users\Student\Documents\GitHub\Tutor\binary_search\.mono\temp\obj\Tools\binary_search.csprojResolveAssemblyReference.cache
+C:\Users\Student\Documents\GitHub\Tutor\binary_search\.mono\temp\obj\Tools\binary_search.csproj.CoreCompileInputs.cache
+C:\Users\Student\Documents\GitHub\Tutor\binary_search\.mono\temp\bin\Tools\binary_search.dll
+C:\Users\Student\Documents\GitHub\Tutor\binary_search\.mono\temp\bin\Tools\binary_search.pdb
+C:\Users\Student\Documents\GitHub\Tutor\binary_search\.mono\temp\obj\Tools\binary_search.dll
+C:\Users\Student\Documents\GitHub\Tutor\binary_search\.mono\temp\obj\Tools\binary_search.pdb
