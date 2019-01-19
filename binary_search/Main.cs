@@ -12,6 +12,7 @@ namespace binarysearch {
 			Label label_user_input;
 			Button Buttonguessmain;
 			Button Buttonpcfiguremain;
+			Button Quit;
 			Random rand = new Random();
 			int user_input_highest;
 			int amount_of_user_guesses;
@@ -34,8 +35,10 @@ namespace binarysearch {
 			label_user_input = (Label) GetNode("./user_input_highest");
 			Buttonguessmain = (Button) GetNode("./Polygon2D/Label/Buttonguessmain");
 			Buttonpcfiguremain = (Button) GetNode("./Polygon2D/Label/Buttonpcfiguremain");
+			Quit = (Button) GetNode("./Quit");
 			Buttonguessmain.Text = ("You guess the Program's number");
 			Buttonpcfiguremain.Text = ("Program guesses your number");
+			Quit.Text = ("Quit");
 			
 		}
 	
@@ -51,6 +54,17 @@ namespace binarysearch {
 			else
 				label_user_input.Visible = true;
 	    }
+		
+		public class user_input_highest_other
+    	{	
+		protected string user_input_highest;
+		
+		public string user_input_highest_other
+		{
+			get { return user_input_highest; }
+			set { user_input_highest = value;}
+		}
+		}
 		
 		private void _on_Buttonpcfiguremain_pressed()
 		{
@@ -99,11 +113,16 @@ namespace binarysearch {
 		{
 		    // Replace with function body
 		}
+		
+		private void _on_Quit_pressed()
+		{
+    		GetTree().Quit();
+		}
+
 	}
 	
 	
 }
-
 
 
 

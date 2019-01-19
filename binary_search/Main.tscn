@@ -15,8 +15,9 @@ use_filter = false
 font_data = SubResource( 1 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Main" type="Control" index="0"]
+[node name="Main" type="Control"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -409,6 +410,30 @@ text = "HELP!"
 flat = false
 align = 1
 
+[node name="Quit" type="Button" parent="." index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1020.0
+margin_top = 684.0
+margin_right = 1173.0
+margin_bottom = 749.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
 [connection signal="pressed" from="Polygon2D/Label/Buttonpcfiguremain" to="." method="_on_Buttonpcfiguremain_pressed"]
 
 [connection signal="pressed" from="Polygon2D/Label/Buttonguessmain" to="." method="_on_Buttonguessmain_pressed"]
@@ -420,5 +445,7 @@ align = 1
 [connection signal="pressed" from="button_reset_count" to="." method="_on_button_reset_count_pressed"]
 
 [connection signal="pressed" from="help_button" to="." method="_on_help_button_pressed"]
+
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
 
 
