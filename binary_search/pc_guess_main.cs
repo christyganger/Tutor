@@ -6,7 +6,8 @@ public class pc_guess_main : Node
 {
     int mid = 0;
 	int user_input_lowest = 0;
-	int user_input_highest = binarysearch.Main.user_input_highest_other.user_input_highest.user_input_highest;
+	binarysearch.Main binse = new binarysearch.Main();
+	int user_input_highest = binse.transfer_variable_from_main.user_input_highest_transfer;
 	// not implimented? int your_number_goes_here = 0;
 	String text_buffer_out = "a random number has been placed in your number box for the pc to guess";
 	LineEdit my_number_is_textbox;

@@ -55,15 +55,16 @@ namespace binarysearch {
 				label_user_input.Visible = true;
 	    }
 		
-		public class user_input_highest_other
-    	{	
-		protected string user_input_highest;
+		public static class transfer_variable_from_main
 		
-		public string user_input_highest_other
-		{
-			get { return user_input_highest; }
-			set { user_input_highest = value;}
-		}
+    	{	
+			private string user_input_highest;
+		
+			public string user_input_highest_transfer
+				{
+				get { return user_input_highest; }
+				set { user_input_highest = value;}
+			}
 		}
 		
 		private void _on_Buttonpcfiguremain_pressed()
