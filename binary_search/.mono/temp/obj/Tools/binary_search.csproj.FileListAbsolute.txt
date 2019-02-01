@@ -8,3 +8,7 @@ C:\Users\chris\Documents\GitHub\Tutor\binary_search\.mono\temp\obj\Tools\binary_
 C:\Users\chris\Documents\GitHub\Tutor\binary_search\.mono\temp\obj\Tools\binary_search.csproj.CoreCompileInputs.cache
 C:\Users\chris\Documents\GitHub\Tutor\binary_search\.mono\temp\obj\Tools\binary_search.dll
 C:\Users\chris\Documents\GitHub\Tutor\binary_search\.mono\temp\obj\Tools\binary_search.pdb
+C:\Users\chris\Documents\GitHub\Tutor_experimental\binary_search\.mono\temp\obj\Tools\binary_search.csprojAssemblyReference.cache
+C:\Users\chris\Documents\GitHub\Tutor_experimental\binary_search\.mono\temp\obj\Tools\binary_search.csproj.CoreCompileInputs.cache
+C:\Users\chris\Documents\GitHub\Tutor_experimental\binary_search\.mono\temp\obj\Tools\binary_search.dll
+C:\Users\chris\Documents\GitHub\Tutor_experimental\binary_search\.mono\temp\obj\Tools\binary_search.pdb

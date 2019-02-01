@@ -55,9 +55,12 @@ namespace binarysearch {
 				label_user_input.Visible = true;
 	    }
 		
-		public static class transfer_variable_from_main
+		public class transfer_variable_from_main
 		
     	{	
+		public transfer_variable_from_main()
+		{}
+		public int MyAutoImplementedProperty { get; set; }
 			private string user_input_highest;
 		
 			public string user_input_highest_transfer
