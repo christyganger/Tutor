@@ -1,8 +1,0 @@
-Need to modify for array use.
-
-Make more user friendly
-
-Make prettier
-
-Append to line code, instead of replace to explain whats happening?
- 
